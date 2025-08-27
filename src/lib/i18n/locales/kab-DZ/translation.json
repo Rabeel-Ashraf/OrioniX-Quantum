@@ -1066,7 +1066,7 @@
 	"OrionIX Quantum can use tools provided by any OpenAPI server.": "OrionIX Quantum yezmer ad yesseqdec ifecka i d-yettak yal aqeddac OpenAPI.",
 	"OrionIX Quantum uses faster-whisper internally.": "OrionIX Quantum yesseqdac faster-whisper sdaxel-is.",
 	"OrionIX Quantum uses SpeechT5 and CMU Arctic speaker embeddings.": "Ldi WebUI yesseqdac SpeechT5 akked CMU Arktik.",
-	"OrionIX Quantum version (v{{OrionIX Quantum_VERSION}}) is lower than required version (v{{REQUIRED_VERSION}})": "",
+	"OrionIX Quantum version (v{{ORIONIX_QUANTUM_VERSION}}) is lower than required version (v{{REQUIRED_VERSION}})": "",
 	"OpenAI": "OpenAI",
 	"OpenAI API": "API OpenAI",
 	"OpenAI API Config": "Tawila n API OpenAI",

@@ -18,14 +18,14 @@
 		console.log(data);
 
 		const manifest = extractFrontmatter(data.content);
-		if (compareVersion(manifest?.required_OrionIX Quantum_version ?? '0.0.0', WEBUI_VERSION)) {
+		if (compareVersion(manifest?.required_orionix_quantum_version ?? '0.0.0', WEBUI_VERSION)) {
 			console.log('Version is lower than required');
 			toast.error(
 				$i18n.t(
-					'OrionIX Quantum version (v{{OrionIX Quantum_VERSION}}) is lower than required version (v{{REQUIRED_VERSION}})',
+					'OrionIX Quantum version (v{{ORIONIX_QUANTUM_VERSION}}) is lower than required version (v{{REQUIRED_VERSION}})',
 					{
-						OrionIX Quantum_VERSION: WEBUI_VERSION,
-						REQUIRED_VERSION: manifest?.required_OrionIX Quantum_version ?? '0.0.0'
+						ORIONIX_QUANTUM_VERSION: WEBUI_VERSION,
+						REQUIRED_VERSION: manifest?.required_orionix_quantum_version ?? '0.0.0'
 					}
 				)
 			);

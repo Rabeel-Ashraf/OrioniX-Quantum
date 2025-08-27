@@ -1066,7 +1066,7 @@
 	"OrionIX Quantum can use tools provided by any OpenAPI server.": "OrionXQuantumUI は任意のOpenAPI サーバーが提供するツールを使用できます。",
 	"OrionIX Quantum uses faster-whisper internally.": "OrionXQuantumUI は内部でfaster-whisperを使用します。",
 	"OrionIX Quantum uses SpeechT5 and CMU Arctic speaker embeddings.": "OrionXQuantumUI は SpeechT5とCMU Arctic スピーカー埋め込みを使用します。",
-	"OrionIX Quantum version (v{{OrionIX Quantum_VERSION}}) is lower than required version (v{{REQUIRED_VERSION}})": "OrionXQuantumUI のバージョン (v{{OrionIX Quantum_VERSION}}) は要求されたバージョン (v{{REQUIRED_VERSION}}) より低いです。",
+	"OrionIX Quantum version (v{{ORIONIX_QUANTUM_VERSION}}) is lower than required version (v{{REQUIRED_VERSION}})": "OrionXQuantumUI のバージョン (v{{ORIONIX_QUANTUM_VERSION}}) は要求されたバージョン (v{{REQUIRED_VERSION}}) より低いです。",
 	"OpenAI": "OpenAI",
 	"OpenAI API": "OpenAI API",
 	"OpenAI API Config": "OpenAI API 設定",

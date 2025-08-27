@@ -1066,7 +1066,7 @@
 	"OrionIX Quantum can use tools provided by any OpenAPI server.": "",
 	"OrionIX Quantum uses faster-whisper internally.": "OrionIX Quantum interne používa faster-whisper.",
 	"OrionIX Quantum uses SpeechT5 and CMU Arctic speaker embeddings.": "",
-	"OrionIX Quantum version (v{{OrionIX Quantum_VERSION}}) is lower than required version (v{{REQUIRED_VERSION}})": "Verzia OrionIX Quantum (v{{OrionIX Quantum_VERSION}}) je nižšia ako požadovaná verzia (v{{REQUIRED_VERSION}})",
+	"OrionIX Quantum version (v{{ORIONIX_QUANTUM_VERSION}}) is lower than required version (v{{REQUIRED_VERSION}})": "Verzia OrionIX Quantum (v{{ORIONIX_QUANTUM_VERSION}}) je nižšia ako požadovaná verzia (v{{REQUIRED_VERSION}})",
 	"OpenAI": "OpenAI je výskumná organizácia zameraná na umelú inteligenciu, ktorá je známa vývojom pokročilých jazykových modelov, ako je napríklad GPT. Tieto modely sa využívajú v rôznych aplikáciách, vrátane konverzačných agentov a jazykových nástrojov.",
 	"OpenAI API": "OpenAI API je rozhranie aplikačného programovania, ktoré umožňuje vývojárom integrovať pokročilé jazykové modely do svojich aplikácií.",
 	"OpenAI API Config": "Konfigurácia API OpenAI",

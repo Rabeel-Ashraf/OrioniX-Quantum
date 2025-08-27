@@ -1066,7 +1066,7 @@
 	"OrionIX Quantum can use tools provided by any OpenAPI server.": "Az OrionIX Quantum bármely OpenAPI szerver által biztosított eszközöket használhat.",
 	"OrionIX Quantum uses faster-whisper internally.": "Az OrionIX Quantum belsőleg a faster-whispert használja.",
 	"OrionIX Quantum uses SpeechT5 and CMU Arctic speaker embeddings.": "Az OrionIX Quantum a SpeechT5-öt és a CMU Arctic hangszóró beágyazásokat használja.",
-	"OrionIX Quantum version (v{{OrionIX Quantum_VERSION}}) is lower than required version (v{{REQUIRED_VERSION}})": "Az OrionIX Quantum verzió (v{{OrionIX Quantum_VERSION}}) alacsonyabb, mint a szükséges verzió (v{{REQUIRED_VERSION}})",
+	"OrionIX Quantum version (v{{ORIONIX_QUANTUM_VERSION}}) is lower than required version (v{{REQUIRED_VERSION}})": "Az OrionIX Quantum verzió (v{{ORIONIX_QUANTUM_VERSION}}) alacsonyabb, mint a szükséges verzió (v{{REQUIRED_VERSION}})",
 	"OpenAI": "OpenAI",
 	"OpenAI API": "OpenAI API",
 	"OpenAI API Config": "OpenAI API konfiguráció",
