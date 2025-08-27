@@ -82,12 +82,12 @@ Want to learn more about Open WebUI's features? Check out our [Open WebUI docume
   </tr> -->
   <tr>
     <td>
-      <a href="https://tailscale.com/blog/self-host-a-local-ai-stack/?utm_source=OpenWebUI&utm_medium=paid-ad-placement&utm_campaign=OpenWebUI-Docs" target="_blank">
+      <a href="https://tailscale.com/blog/self-host-a-local-ai-stack/?utm_source=OrionXQuantumUI&utm_medium=paid-ad-placement&utm_campaign=OrionXQuantumUI-Docs" target="_blank">
         <img src="https://docs.openwebui.com/sponsors/logos/tailscale.png" alt="Tailscale" style="width: 8rem; height: 8rem; border-radius: .75rem;" />
       </a>
     </td>
     <td>
-      <a href="https://tailscale.com/blog/self-host-a-local-ai-stack/?utm_source=OpenWebUI&utm_medium=paid-ad-placement&utm_campaign=OpenWebUI-Docs">Tailscale</a> • Connect self-hosted AI to any device with Tailscale
+      <a href="https://tailscale.com/blog/self-host-a-local-ai-stack/?utm_source=OrionXQuantumUI&utm_medium=paid-ad-placement&utm_campaign=OrionXQuantumUI-Docs">Tailscale</a> • Connect self-hosted AI to any device with Tailscale
     </td>
   </tr>
    <tr>

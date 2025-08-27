@@ -70,10 +70,10 @@ async def send_get_request(url, key=None, user: UserModel = None):
                     **({"Authorization": f"Bearer {key}"} if key else {}),
                     **(
                         {
-                            "X-OpenWebUI-User-Name": quote(user.name, safe=" "),
-                            "X-OpenWebUI-User-Id": user.id,
-                            "X-OpenWebUI-User-Email": user.email,
-                            "X-OpenWebUI-User-Role": user.role,
+                            "X-OpenXQuantumUI-User-Name": quote(user.name, safe=" "),
+                            "X-OpenXQuantumUI-User-Id": user.id,
+                            "X-OpenXQuantumUI-User-Email": user.email,
+                            "X-OpenXQuantumUI-User-Role": user.role,
                         }
                         if ENABLE_FORWARD_USER_INFO_HEADERS and user
                         else {}
@@ -229,10 +229,10 @@ async def speech(request: Request, user=Depends(get_verified_user)):
                     ),
                     **(
                         {
-                            "X-OpenWebUI-User-Name": quote(user.name, safe=" "),
-                            "X-OpenWebUI-User-Id": user.id,
-                            "X-OpenWebUI-User-Email": user.email,
-                            "X-OpenWebUI-User-Role": user.role,
+                            "X-OpenXQuantumUI-User-Name": quote(user.name, safe=" "),
+                            "X-OpenXQuantumUI-User-Id": user.id,
+                            "X-OpenXQuantumUI-User-Email": user.email,
+                            "X-OpenXQuantumUI-User-Role": user.role,
                         }
                         if ENABLE_FORWARD_USER_INFO_HEADERS
                         else {}
@@ -493,10 +493,10 @@ async def get_models(
                     "Content-Type": "application/json",
                     **(
                         {
-                            "X-OpenWebUI-User-Name": quote(user.name, safe=" "),
-                            "X-OpenWebUI-User-Id": user.id,
-                            "X-OpenWebUI-User-Email": user.email,
-                            "X-OpenWebUI-User-Role": user.role,
+                            "X-OpenXQuantumUI-User-Name": quote(user.name, safe=" "),
+                            "X-OpenXQuantumUI-User-Id": user.id,
+                            "X-OpenXQuantumUI-User-Email": user.email,
+                            "X-OpenXQuantumUI-User-Role": user.role,
                         }
                         if ENABLE_FORWARD_USER_INFO_HEADERS
                         else {}
@@ -588,10 +588,10 @@ async def verify_connection(
                 "Content-Type": "application/json",
                 **(
                     {
-                        "X-OpenWebUI-User-Name": quote(user.name, safe=" "),
-                        "X-OpenWebUI-User-Id": user.id,
-                        "X-OpenWebUI-User-Email": user.email,
-                        "X-OpenWebUI-User-Role": user.role,
+                        "X-OpenXQuantumUI-User-Name": quote(user.name, safe=" "),
+                        "X-OpenXQuantumUI-User-Id": user.id,
+                        "X-OpenXQuantumUI-User-Email": user.email,
+                        "X-OpenXQuantumUI-User-Role": user.role,
                     }
                     if ENABLE_FORWARD_USER_INFO_HEADERS
                     else {}
@@ -848,12 +848,12 @@ async def generate_chat_completion(
         ),
         **(
             {
-                "X-OpenWebUI-User-Name": quote(user.name, safe=" "),
-                "X-OpenWebUI-User-Id": user.id,
-                "X-OpenWebUI-User-Email": user.email,
-                "X-OpenWebUI-User-Role": user.role,
+                "X-OpenXQuantumUI-User-Name": quote(user.name, safe=" "),
+                "X-OpenXQuantumUI-User-Id": user.id,
+                "X-OpenXQuantumUI-User-Email": user.email,
+                "X-OpenXQuantumUI-User-Role": user.role,
                 **(
-                    {"X-OpenWebUI-Chat-Id": metadata.get("chat_id")}
+                    {"X-OpenXQuantumUI-Chat-Id": metadata.get("chat_id")}
                     if metadata and metadata.get("chat_id")
                     else {}
                 ),
@@ -967,10 +967,10 @@ async def embeddings(request: Request, form_data: dict, user):
                 "Content-Type": "application/json",
                 **(
                     {
-                        "X-OpenWebUI-User-Name": quote(user.name, safe=" "),
-                        "X-OpenWebUI-User-Id": user.id,
-                        "X-OpenWebUI-User-Email": user.email,
-                        "X-OpenWebUI-User-Role": user.role,
+                        "X-OpenXQuantumUI-User-Name": quote(user.name, safe=" "),
+                        "X-OpenXQuantumUI-User-Id": user.id,
+                        "X-OpenXQuantumUI-User-Email": user.email,
+                        "X-OpenXQuantumUI-User-Role": user.role,
                     }
                     if ENABLE_FORWARD_USER_INFO_HEADERS and user
                     else {}
@@ -1041,10 +1041,10 @@ async def proxy(path: str, request: Request, user=Depends(get_verified_user)):
             "Content-Type": "application/json",
             **(
                 {
-                    "X-OpenWebUI-User-Name": quote(user.name, safe=" "),
-                    "X-OpenWebUI-User-Id": user.id,
-                    "X-OpenWebUI-User-Email": user.email,
-                    "X-OpenWebUI-User-Role": user.role,
+                    "X-OpenXQuantumUI-User-Name": quote(user.name, safe=" "),
+                    "X-OpenXQuantumUI-User-Id": user.id,
+                    "X-OpenXQuantumUI-User-Email": user.email,
+                    "X-OpenXQuantumUI-User-Role": user.role,
                 }
                 if ENABLE_FORWARD_USER_INFO_HEADERS
                 else {}
