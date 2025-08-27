@@ -42,9 +42,9 @@
 	let codeEditor;
 	let boilerplate = `"""
 title: Example Filter
-author: open-webui
-author_url: https://github.com/open-webui
-funding_url: https://github.com/open-webui
+author: OrionIX Quantum
+author_url: https://github.com/OrionIX Quantum
+funding_url: https://github.com/OrionIX Quantum
 version: 0.1
 """
 
@@ -111,7 +111,7 @@ class Filter:
 
 	const _boilerplate = `from pydantic import BaseModel
 from typing import Optional, Union, Generator, Iterator
-from open_webui.utils.misc import get_last_user_message
+from OrionIX Quantum.utils.misc import get_last_user_message
 
 import os
 import requests

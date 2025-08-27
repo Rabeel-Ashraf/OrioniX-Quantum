@@ -9,8 +9,8 @@ from markdown import markdown
 import site
 from fpdf import FPDF
 
-from open_webui.env import STATIC_DIR, FONTS_DIR
-from open_webui.models.chats import ChatTitleMessagesForm
+from OrionIX Quantum.env import STATIC_DIR, FONTS_DIR
+from OrionIX Quantum.models.chats import ChatTitleMessagesForm
 
 
 class PDFGenerator:
@@ -108,7 +108,7 @@ class PDFGenerator:
             if not FONTS_DIR.exists():
                 FONTS_DIR = Path(site.getsitepackages()[0]) / "static/fonts"
             # When running using `pip install -e .` the static directory is in the site packages.
-            # This path only works if `open-webui serve` is run from the root of this project.
+            # This path only works if `OrionIX Quantum serve` is run from the root of this project.
             if not FONTS_DIR.exists():
                 FONTS_DIR = Path(".") / "backend" / "static" / "fonts"
 

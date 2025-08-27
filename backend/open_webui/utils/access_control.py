@@ -1,9 +1,9 @@
 from typing import Optional, Union, List, Dict, Any
-from open_webui.models.users import Users, UserModel
-from open_webui.models.groups import Groups
+from OrionIX Quantum.models.users import Users, UserModel
+from OrionIX Quantum.models.groups import Groups
 
 
-from open_webui.config import DEFAULT_USER_PERMISSIONS
+from OrionIX Quantum.config import DEFAULT_USER_PERMISSIONS
 import json
 
 

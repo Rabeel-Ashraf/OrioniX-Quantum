@@ -5,7 +5,7 @@ import datetime
 import logging
 from aiohttp import ClientSession
 
-from open_webui.models.auths import (
+from OrionIX Quantum.models.auths import (
     AddUserForm,
     ApiKey,
     Auths,
@@ -17,11 +17,11 @@ from open_webui.models.auths import (
     UpdatePasswordForm,
     UserResponse,
 )
-from open_webui.models.users import Users, UpdateProfileForm
-from open_webui.models.groups import Groups
+from OrionIX Quantum.models.users import Users, UpdateProfileForm
+from OrionIX Quantum.models.groups import Groups
 
-from open_webui.constants import ERROR_MESSAGES, WEBHOOK_MESSAGES
-from open_webui.env import (
+from OrionIX Quantum.constants import ERROR_MESSAGES, WEBHOOK_MESSAGES
+from OrionIX Quantum.env import (
     WEBUI_AUTH,
     WEBUI_AUTH_TRUSTED_EMAIL_HEADER,
     WEBUI_AUTH_TRUSTED_NAME_HEADER,
@@ -33,11 +33,11 @@ from open_webui.env import (
 )
 from fastapi import APIRouter, Depends, HTTPException, Request, status
 from fastapi.responses import RedirectResponse, Response, JSONResponse
-from open_webui.config import OPENID_PROVIDER_URL, ENABLE_OAUTH_SIGNUP, ENABLE_LDAP
+from OrionIX Quantum.config import OPENID_PROVIDER_URL, ENABLE_OAUTH_SIGNUP, ENABLE_LDAP
 from pydantic import BaseModel
 
-from open_webui.utils.misc import parse_duration, validate_email_format
-from open_webui.utils.auth import (
+from OrionIX Quantum.utils.misc import parse_duration, validate_email_format
+from OrionIX Quantum.utils.auth import (
     decode_token,
     create_api_key,
     create_token,
@@ -47,8 +47,8 @@ from open_webui.utils.auth import (
     get_password_hash,
     get_http_authorization_cred,
 )
-from open_webui.utils.webhook import post_webhook
-from open_webui.utils.access_control import get_permissions
+from OrionIX Quantum.utils.webhook import post_webhook
+from OrionIX Quantum.utils.access_control import get_permissions
 
 from typing import Optional, List
 

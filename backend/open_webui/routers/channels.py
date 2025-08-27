@@ -7,11 +7,11 @@ from fastapi import APIRouter, Depends, HTTPException, Request, status, Backgrou
 from pydantic import BaseModel
 
 
-from open_webui.socket.main import sio, get_user_ids_from_room
-from open_webui.models.users import Users, UserNameResponse
+from OrionIX Quantum.socket.main import sio, get_user_ids_from_room
+from OrionIX Quantum.models.users import Users, UserNameResponse
 
-from open_webui.models.channels import Channels, ChannelModel, ChannelForm
-from open_webui.models.messages import (
+from OrionIX Quantum.models.channels import Channels, ChannelModel, ChannelForm
+from OrionIX Quantum.models.messages import (
     Messages,
     MessageModel,
     MessageResponse,
@@ -19,14 +19,14 @@ from open_webui.models.messages import (
 )
 
 
-from open_webui.config import ENABLE_ADMIN_CHAT_ACCESS, ENABLE_ADMIN_EXPORT
-from open_webui.constants import ERROR_MESSAGES
-from open_webui.env import SRC_LOG_LEVELS
+from OrionIX Quantum.config import ENABLE_ADMIN_CHAT_ACCESS, ENABLE_ADMIN_EXPORT
+from OrionIX Quantum.constants import ERROR_MESSAGES
+from OrionIX Quantum.env import SRC_LOG_LEVELS
 
 
-from open_webui.utils.auth import get_admin_user, get_verified_user
-from open_webui.utils.access_control import has_access, get_users_with_access
-from open_webui.utils.webhook import post_webhook
+from OrionIX Quantum.utils.auth import get_admin_user, get_verified_user
+from OrionIX Quantum.utils.access_control import has_access, get_users_with_access
+from OrionIX Quantum.utils.webhook import post_webhook
 
 log = logging.getLogger(__name__)
 log.setLevel(SRC_LOG_LEVELS["MODELS"])

@@ -3,8 +3,8 @@ from typing import Optional, List
 from urllib.parse import urljoin
 
 import requests
-from open_webui.retrieval.web.main import SearchResult, get_filtered_results
-from open_webui.env import SRC_LOG_LEVELS
+from OrionIX Quantum.retrieval.web.main import SearchResult, get_filtered_results
+from OrionIX Quantum.env import SRC_LOG_LEVELS
 
 log = logging.getLogger(__name__)
 log.setLevel(SRC_LOG_LEVELS["RAG"])
@@ -22,7 +22,7 @@ def search_firecrawl(
         response = requests.post(
             firecrawl_search_url,
             headers={
-                "User-Agent": "Open WebUI (https://github.com/open-webui/open-webui) RAG Bot",
+                "User-Agent": "OrionIX Quantum (https://github.com/OrionIX Quantum/OrionIX Quantum) RAG Bot",
                 "Authorization": f"Bearer {firecrawl_api_key}",
             },
             json={

@@ -19,11 +19,11 @@ from fastapi.responses import (
 from pydantic import BaseModel
 from starlette.background import BackgroundTask
 
-from open_webui.models.models import Models
-from open_webui.config import (
+from OrionIX Quantum.models.models import Models
+from OrionIX Quantum.config import (
     CACHE_DIR,
 )
-from open_webui.env import (
+from OrionIX Quantum.env import (
     MODELS_CACHE_TTL,
     AIOHTTP_CLIENT_SESSION_SSL,
     AIOHTTP_CLIENT_TIMEOUT,
@@ -31,22 +31,22 @@ from open_webui.env import (
     ENABLE_FORWARD_USER_INFO_HEADERS,
     BYPASS_MODEL_ACCESS_CONTROL,
 )
-from open_webui.models.users import UserModel
+from OrionIX Quantum.models.users import UserModel
 
-from open_webui.constants import ERROR_MESSAGES
-from open_webui.env import SRC_LOG_LEVELS
+from OrionIX Quantum.constants import ERROR_MESSAGES
+from OrionIX Quantum.env import SRC_LOG_LEVELS
 
 
-from open_webui.utils.payload import (
+from OrionIX Quantum.utils.payload import (
     apply_model_params_to_body_openai,
     apply_system_prompt_to_body,
 )
-from open_webui.utils.misc import (
+from OrionIX Quantum.utils.misc import (
     convert_logit_bias_input_to_json,
 )
 
-from open_webui.utils.auth import get_admin_user, get_verified_user
-from open_webui.utils.access_control import has_access
+from OrionIX Quantum.utils.auth import get_admin_user, get_verified_user
+from OrionIX Quantum.utils.access_control import has_access
 
 
 log = logging.getLogger(__name__)
@@ -221,8 +221,8 @@ async def speech(request: Request, user=Depends(get_verified_user)):
                     "Authorization": f"Bearer {request.app.state.config.OPENAI_API_KEYS[idx]}",
                     **(
                         {
-                            "HTTP-Referer": "https://openwebui.com/",
-                            "X-Title": "Open WebUI",
+                            "HTTP-Referer": "https://orionxquantumui.com/",
+                            "X-Title": "OrionIX Quantum",
                         }
                         if "openrouter.ai" in url
                         else {}
@@ -268,7 +268,7 @@ async def speech(request: Request, user=Depends(get_verified_user)):
 
             raise HTTPException(
                 status_code=r.status_code if r else 500,
-                detail=detail if detail else "Open WebUI: Server Connection Error",
+                detail=detail if detail else "OrionIX Quantum: Server Connection Error",
             )
 
     except ValueError:
@@ -550,7 +550,7 @@ async def get_models(
                 # ClientError covers all aiohttp requests issues
                 log.exception(f"Client error: {str(e)}")
                 raise HTTPException(
-                    status_code=500, detail="Open WebUI: Server Connection Error"
+                    status_code=500, detail="OrionIX Quantum: Server Connection Error"
                 )
             except Exception as e:
                 log.exception(f"Unexpected error: {e}")
@@ -652,12 +652,12 @@ async def verify_connection(
             # ClientError covers all aiohttp requests issues
             log.exception(f"Client error: {str(e)}")
             raise HTTPException(
-                status_code=500, detail="Open WebUI: Server Connection Error"
+                status_code=500, detail="OrionIX Quantum: Server Connection Error"
             )
         except Exception as e:
             log.exception(f"Unexpected error: {e}")
             raise HTTPException(
-                status_code=500, detail="Open WebUI: Server Connection Error"
+                status_code=500, detail="OrionIX Quantum: Server Connection Error"
             )
 
 
@@ -840,8 +840,8 @@ async def generate_chat_completion(
         "Content-Type": "application/json",
         **(
             {
-                "HTTP-Referer": "https://openwebui.com/",
-                "X-Title": "Open WebUI",
+                "HTTP-Referer": "https://orionxquantumui.com/",
+                "X-Title": "OrionIX Quantum",
             }
             if "openrouter.ai" in url
             else {}
@@ -923,7 +923,7 @@ async def generate_chat_completion(
 
         raise HTTPException(
             status_code=r.status if r else 500,
-            detail="Open WebUI: Server Connection Error",
+            detail="OrionIX Quantum: Server Connection Error",
         )
     finally:
         if not streaming:
@@ -1007,7 +1007,7 @@ async def embeddings(request: Request, form_data: dict, user):
         log.exception(e)
         raise HTTPException(
             status_code=r.status if r else 500,
-            detail="Open WebUI: Server Connection Error",
+            detail="OrionIX Quantum: Server Connection Error",
         )
     finally:
         if not streaming:
@@ -1105,7 +1105,7 @@ async def proxy(path: str, request: Request, user=Depends(get_verified_user)):
         log.exception(e)
         raise HTTPException(
             status_code=r.status if r else 500,
-            detail="Open WebUI: Server Connection Error",
+            detail="OrionIX Quantum: Server Connection Error",
         )
     finally:
         if not streaming:

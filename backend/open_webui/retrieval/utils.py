@@ -13,24 +13,24 @@ from langchain.retrievers import ContextualCompressionRetriever, EnsembleRetriev
 from langchain_community.retrievers import BM25Retriever
 from langchain_core.documents import Document
 
-from open_webui.config import VECTOR_DB
-from open_webui.retrieval.vector.factory import VECTOR_DB_CLIENT
+from OrionIX Quantum.config import VECTOR_DB
+from OrionIX Quantum.retrieval.vector.factory import VECTOR_DB_CLIENT
 
-from open_webui.models.users import UserModel
-from open_webui.models.files import Files
-from open_webui.models.knowledge import Knowledges
-from open_webui.models.notes import Notes
+from OrionIX Quantum.models.users import UserModel
+from OrionIX Quantum.models.files import Files
+from OrionIX Quantum.models.knowledge import Knowledges
+from OrionIX Quantum.models.notes import Notes
 
-from open_webui.retrieval.vector.main import GetResult
-from open_webui.utils.access_control import has_access
+from OrionIX Quantum.retrieval.vector.main import GetResult
+from OrionIX Quantum.utils.access_control import has_access
 
 
-from open_webui.env import (
+from OrionIX Quantum.env import (
     SRC_LOG_LEVELS,
     OFFLINE_MODE,
     ENABLE_FORWARD_USER_INFO_HEADERS,
 )
-from open_webui.config import (
+from OrionIX Quantum.config import (
     RAG_EMBEDDING_QUERY_PREFIX,
     RAG_EMBEDDING_CONTENT_PREFIX,
     RAG_EMBEDDING_PREFIX_FIELD_NAME,

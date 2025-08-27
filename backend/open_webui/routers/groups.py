@@ -3,8 +3,8 @@ from pathlib import Path
 from typing import Optional
 import logging
 
-from open_webui.models.users import Users
-from open_webui.models.groups import (
+from OrionIX Quantum.models.users import Users
+from OrionIX Quantum.models.groups import (
     Groups,
     GroupForm,
     GroupUpdateForm,
@@ -12,12 +12,12 @@ from open_webui.models.groups import (
     UserIdsForm,
 )
 
-from open_webui.config import CACHE_DIR
-from open_webui.constants import ERROR_MESSAGES
+from OrionIX Quantum.config import CACHE_DIR
+from OrionIX Quantum.constants import ERROR_MESSAGES
 from fastapi import APIRouter, Depends, HTTPException, Request, status
 
-from open_webui.utils.auth import get_admin_user, get_verified_user
-from open_webui.env import SRC_LOG_LEVELS
+from OrionIX Quantum.utils.auth import get_admin_user, get_verified_user
+from OrionIX Quantum.env import SRC_LOG_LEVELS
 
 
 log = logging.getLogger(__name__)

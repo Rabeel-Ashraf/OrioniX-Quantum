@@ -8,8 +8,8 @@ import re
 from pydantic import BaseModel, ConfigDict
 from sqlalchemy import BigInteger, Column, Text, JSON, Boolean, func
 
-from open_webui.internal.db import Base, get_db
-from open_webui.env import SRC_LOG_LEVELS
+from OrionIX Quantum.internal.db import Base, get_db
+from OrionIX Quantum.env import SRC_LOG_LEVELS
 
 
 log = logging.getLogger(__name__)

@@ -3,7 +3,7 @@ from typing import Optional, Tuple, List, Dict, Any
 from urllib.parse import urlparse
 
 import grpc
-from open_webui.config import (
+from OrionIX Quantum.config import (
     QDRANT_API_KEY,
     QDRANT_GRPC_PORT,
     QDRANT_ON_DISK,
@@ -13,8 +13,8 @@ from open_webui.config import (
     QDRANT_TIMEOUT,
     QDRANT_HNSW_M,
 )
-from open_webui.env import SRC_LOG_LEVELS
-from open_webui.retrieval.vector.main import (
+from OrionIX Quantum.env import SRC_LOG_LEVELS
+from OrionIX Quantum.retrieval.vector.main import (
     GetResult,
     SearchResult,
     VectorDBBase,

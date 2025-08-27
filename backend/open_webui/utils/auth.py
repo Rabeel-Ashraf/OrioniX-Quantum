@@ -21,11 +21,11 @@ from typing import Optional, Union, List, Dict
 
 from opentelemetry import trace
 
-from open_webui.models.users import Users
+from OrionIX Quantum.models.users import Users
 
-from open_webui.constants import ERROR_MESSAGES
+from OrionIX Quantum.constants import ERROR_MESSAGES
 
-from open_webui.env import (
+from OrionIX Quantum.env import (
     OFFLINE_MODE,
     LICENSE_BLOB,
     pk,
@@ -114,8 +114,8 @@ def get_license_data(app, key):
 
     if key:
         us = [
-            "https://api.openwebui.com",
-            "https://licenses.api.openwebui.com",
+            "https://api.orionxquantumui.com",
+            "https://licenses.api.orionxquantumui.com",
         ]
         try:
             for u in us:

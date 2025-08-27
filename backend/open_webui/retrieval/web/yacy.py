@@ -3,8 +3,8 @@ from typing import Optional
 
 import requests
 from requests.auth import HTTPDigestAuth
-from open_webui.retrieval.web.main import SearchResult, get_filtered_results
-from open_webui.env import SRC_LOG_LEVELS
+from OrionIX Quantum.retrieval.web.main import SearchResult, get_filtered_results
+from OrionIX Quantum.env import SRC_LOG_LEVELS
 
 log = logging.getLogger(__name__)
 log.setLevel(SRC_LOG_LEVELS["RAG"])
@@ -61,7 +61,7 @@ def search_yacy(
         query_url,
         auth=yacy_auth,
         headers={
-            "User-Agent": "Open WebUI (https://github.com/open-webui/open-webui) RAG Bot",
+            "User-Agent": "OrionIX Quantum (https://github.com/OrionIX Quantum/OrionIX Quantum) RAG Bot",
             "Accept": "text/html",
             "Accept-Encoding": "gzip, deflate",
             "Accept-Language": "en-US,en;q=0.5",

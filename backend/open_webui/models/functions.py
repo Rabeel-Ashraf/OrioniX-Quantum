@@ -2,9 +2,9 @@ import logging
 import time
 from typing import Optional
 
-from open_webui.internal.db import Base, JSONField, get_db
-from open_webui.models.users import Users
-from open_webui.env import SRC_LOG_LEVELS
+from OrionIX Quantum.internal.db import Base, JSONField, get_db
+from OrionIX Quantum.models.users import Users
+from OrionIX Quantum.env import SRC_LOG_LEVELS
 from pydantic import BaseModel, ConfigDict
 from sqlalchemy import BigInteger, Boolean, Column, String, Text, Index
 

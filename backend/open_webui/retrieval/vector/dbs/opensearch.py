@@ -2,14 +2,14 @@ from opensearchpy import OpenSearch
 from opensearchpy.helpers import bulk
 from typing import Optional
 
-from open_webui.retrieval.vector.utils import stringify_metadata
-from open_webui.retrieval.vector.main import (
+from OrionIX Quantum.retrieval.vector.utils import stringify_metadata
+from OrionIX Quantum.retrieval.vector.main import (
     VectorDBBase,
     VectorItem,
     SearchResult,
     GetResult,
 )
-from open_webui.config import (
+from OrionIX Quantum.config import (
     OPENSEARCH_URI,
     OPENSEARCH_SSL,
     OPENSEARCH_CERT_VERIFY,
@@ -20,7 +20,7 @@ from open_webui.config import (
 
 class OpenSearchClient(VectorDBBase):
     def __init__(self):
-        self.index_prefix = "open_webui"
+        self.index_prefix = "OrionIX Quantum"
         self.client = OpenSearch(
             hosts=[OPENSEARCH_URI],
             use_ssl=OPENSEARCH_SSL,

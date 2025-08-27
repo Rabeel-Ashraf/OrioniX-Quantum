@@ -31,43 +31,43 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter, TokenTextSpl
 from langchain_text_splitters import MarkdownHeaderTextSplitter
 from langchain_core.documents import Document
 
-from open_webui.models.files import FileModel, Files
-from open_webui.models.knowledge import Knowledges
-from open_webui.storage.provider import Storage
+from OrionIX Quantum.models.files import FileModel, Files
+from OrionIX Quantum.models.knowledge import Knowledges
+from OrionIX Quantum.storage.provider import Storage
 
 
-from open_webui.retrieval.vector.factory import VECTOR_DB_CLIENT
+from OrionIX Quantum.retrieval.vector.factory import VECTOR_DB_CLIENT
 
 # Document loaders
-from open_webui.retrieval.loaders.main import Loader
-from open_webui.retrieval.loaders.youtube import YoutubeLoader
+from OrionIX Quantum.retrieval.loaders.main import Loader
+from OrionIX Quantum.retrieval.loaders.youtube import YoutubeLoader
 
 # Web search engines
-from open_webui.retrieval.web.main import SearchResult
-from open_webui.retrieval.web.utils import get_web_loader
-from open_webui.retrieval.web.brave import search_brave
-from open_webui.retrieval.web.kagi import search_kagi
-from open_webui.retrieval.web.mojeek import search_mojeek
-from open_webui.retrieval.web.bocha import search_bocha
-from open_webui.retrieval.web.duckduckgo import search_duckduckgo
-from open_webui.retrieval.web.google_pse import search_google_pse
-from open_webui.retrieval.web.jina_search import search_jina
-from open_webui.retrieval.web.searchapi import search_searchapi
-from open_webui.retrieval.web.serpapi import search_serpapi
-from open_webui.retrieval.web.searxng import search_searxng
-from open_webui.retrieval.web.yacy import search_yacy
-from open_webui.retrieval.web.serper import search_serper
-from open_webui.retrieval.web.serply import search_serply
-from open_webui.retrieval.web.serpstack import search_serpstack
-from open_webui.retrieval.web.tavily import search_tavily
-from open_webui.retrieval.web.bing import search_bing
-from open_webui.retrieval.web.exa import search_exa
-from open_webui.retrieval.web.perplexity import search_perplexity
-from open_webui.retrieval.web.sougou import search_sougou
-from open_webui.retrieval.web.firecrawl import search_firecrawl
-from open_webui.retrieval.web.external import search_external
+from OrionIX Quantum.retrieval.web.main import SearchResult
+from OrionIX Quantum.retrieval.web.utils import get_web_loader
+from OrionIX Quantum.retrieval.web.brave import search_brave
+from OrionIX Quantum.retrieval.web.kagi import search_kagi
+from OrionIX Quantum.retrieval.web.mojeek import search_mojeek
+from OrionIX Quantum.retrieval.web.bocha import search_bocha
+from OrionIX Quantum.retrieval.web.duckduckgo import search_duckduckgo
+from OrionIX Quantum.retrieval.web.google_pse import search_google_pse
+from OrionIX Quantum.retrieval.web.jina_search import search_jina
+from OrionIX Quantum.retrieval.web.searchapi import search_searchapi
+from OrionIX Quantum.retrieval.web.serpapi import search_serpapi
+from OrionIX Quantum.retrieval.web.searxng import search_searxng
+from OrionIX Quantum.retrieval.web.yacy import search_yacy
+from OrionIX Quantum.retrieval.web.serper import search_serper
+from OrionIX Quantum.retrieval.web.serply import search_serply
+from OrionIX Quantum.retrieval.web.serpstack import search_serpstack
+from OrionIX Quantum.retrieval.web.tavily import search_tavily
+from OrionIX Quantum.retrieval.web.bing import search_bing
+from OrionIX Quantum.retrieval.web.exa import search_exa
+from OrionIX Quantum.retrieval.web.perplexity import search_perplexity
+from OrionIX Quantum.retrieval.web.sougou import search_sougou
+from OrionIX Quantum.retrieval.web.firecrawl import search_firecrawl
+from OrionIX Quantum.retrieval.web.external import search_external
 
-from open_webui.retrieval.utils import (
+from OrionIX Quantum.retrieval.utils import (
     get_embedding_function,
     get_reranking_function,
     get_model_path,
@@ -76,12 +76,12 @@ from open_webui.retrieval.utils import (
     query_doc,
     query_doc_with_hybrid_search,
 )
-from open_webui.utils.misc import (
+from OrionIX Quantum.utils.misc import (
     calculate_sha256_string,
 )
-from open_webui.utils.auth import get_admin_user, get_verified_user
+from OrionIX Quantum.utils.auth import get_admin_user, get_verified_user
 
-from open_webui.config import (
+from OrionIX Quantum.config import (
     ENV,
     RAG_EMBEDDING_MODEL_AUTO_UPDATE,
     RAG_EMBEDDING_MODEL_TRUST_REMOTE_CODE,
@@ -92,7 +92,7 @@ from open_webui.config import (
     RAG_EMBEDDING_CONTENT_PREFIX,
     RAG_EMBEDDING_QUERY_PREFIX,
 )
-from open_webui.env import (
+from OrionIX Quantum.env import (
     SRC_LOG_LEVELS,
     DEVICE_TYPE,
     DOCKER,
@@ -102,7 +102,7 @@ from open_webui.env import (
     SENTENCE_TRANSFORMERS_CROSS_ENCODER_MODEL_KWARGS,
 )
 
-from open_webui.constants import ERROR_MESSAGES
+from OrionIX Quantum.constants import ERROR_MESSAGES
 
 log = logging.getLogger(__name__)
 log.setLevel(SRC_LOG_LEVELS["RAG"])
@@ -148,7 +148,7 @@ def get_rf(
     if reranking_model:
         if any(model in reranking_model for model in ["jinaai/jina-colbert-v2"]):
             try:
-                from open_webui.retrieval.models.colbert import ColBERT
+                from OrionIX Quantum.retrieval.models.colbert import ColBERT
 
                 rf = ColBERT(
                     get_model_path(reranking_model, auto_update),
@@ -161,7 +161,7 @@ def get_rf(
         else:
             if engine == "external":
                 try:
-                    from open_webui.retrieval.models.external import ExternalReranker
+                    from OrionIX Quantum.retrieval.models.external import ExternalReranker
 
                     rf = ExternalReranker(
                         url=external_reranker_url,

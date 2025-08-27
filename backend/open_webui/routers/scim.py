@@ -1,5 +1,5 @@
 """
-Experimental SCIM 2.0 Implementation for Open WebUI
+Experimental SCIM 2.0 Implementation for OrionIX Quantum
 Provides System for Cross-domain Identity Management endpoints for users and groups
 
 NOTE: This is an experimental implementation and may not fully comply with SCIM 2.0 standards, and is subject to change.
@@ -15,16 +15,16 @@ from fastapi import APIRouter, Depends, HTTPException, Request, Query, Header, s
 from fastapi.responses import JSONResponse
 from pydantic import BaseModel, Field, ConfigDict
 
-from open_webui.models.users import Users, UserModel
-from open_webui.models.groups import Groups, GroupModel
-from open_webui.utils.auth import (
+from OrionIX Quantum.models.users import Users, UserModel
+from OrionIX Quantum.models.groups import Groups, GroupModel
+from OrionIX Quantum.utils.auth import (
     get_admin_user,
     get_current_user,
     decode_token,
     get_verified_user,
 )
-from open_webui.constants import ERROR_MESSAGES
-from open_webui.env import SRC_LOG_LEVELS
+from OrionIX Quantum.constants import ERROR_MESSAGES
+from OrionIX Quantum.env import SRC_LOG_LEVELS
 
 log = logging.getLogger(__name__)
 log.setLevel(SRC_LOG_LEVELS["MAIN"])
@@ -766,7 +766,7 @@ async def create_group(
             member_ids.append(member.value)
 
     # Create group
-    from open_webui.models.groups import GroupForm
+    from OrionIX Quantum.models.groups import GroupForm
 
     form = GroupForm(
         name=group_data.displayName,
@@ -790,7 +790,7 @@ async def create_group(
 
     # Add members if provided
     if member_ids:
-        from open_webui.models.groups import GroupUpdateForm
+        from OrionIX Quantum.models.groups import GroupUpdateForm
 
         update_form = GroupUpdateForm(
             name=new_group.name,
@@ -819,7 +819,7 @@ async def update_group(
         )
 
     # Build update form
-    from open_webui.models.groups import GroupUpdateForm
+    from OrionIX Quantum.models.groups import GroupUpdateForm
 
     update_form = GroupUpdateForm(
         name=group_data.displayName if group_data.displayName else group.name,
@@ -857,7 +857,7 @@ async def patch_group(
             detail=f"Group {group_id} not found",
         )
 
-    from open_webui.models.groups import GroupUpdateForm
+    from OrionIX Quantum.models.groups import GroupUpdateForm
 
     update_form = GroupUpdateForm(
         name=group.name,

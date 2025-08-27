@@ -2,8 +2,8 @@ import logging
 from typing import Optional, Literal
 import requests
 
-from open_webui.retrieval.web.main import SearchResult, get_filtered_results
-from open_webui.env import SRC_LOG_LEVELS
+from OrionIX Quantum.retrieval.web.main import SearchResult, get_filtered_results
+from OrionIX Quantum.env import SRC_LOG_LEVELS
 
 MODELS = Literal[
     "sonar",

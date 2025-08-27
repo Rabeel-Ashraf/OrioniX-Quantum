@@ -27,14 +27,14 @@ from sqlalchemy.ext.mutable import MutableDict
 from sqlalchemy.exc import NoSuchTableError
 
 
-from open_webui.retrieval.vector.utils import stringify_metadata
-from open_webui.retrieval.vector.main import (
+from OrionIX Quantum.retrieval.vector.utils import stringify_metadata
+from OrionIX Quantum.retrieval.vector.main import (
     VectorDBBase,
     VectorItem,
     SearchResult,
     GetResult,
 )
-from open_webui.config import (
+from OrionIX Quantum.config import (
     PGVECTOR_DB_URL,
     PGVECTOR_INITIALIZE_MAX_VECTOR_LENGTH,
     PGVECTOR_PGCRYPTO,
@@ -45,7 +45,7 @@ from open_webui.config import (
     PGVECTOR_POOL_RECYCLE,
 )
 
-from open_webui.env import SRC_LOG_LEVELS
+from OrionIX Quantum.env import SRC_LOG_LEVELS
 
 VECTOR_LENGTH = PGVECTOR_INITIALIZE_MAX_VECTOR_LENGTH
 Base = declarative_base()
@@ -82,7 +82,7 @@ class PgvectorClient(VectorDBBase):
 
         # if no pgvector uri, use the existing database connection
         if not PGVECTOR_DB_URL:
-            from open_webui.internal.db import Session
+            from OrionIX Quantum.internal.db import Session
 
             self.session = Session
         else:

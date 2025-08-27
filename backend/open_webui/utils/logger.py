@@ -5,7 +5,7 @@ from typing import TYPE_CHECKING
 
 from loguru import logger
 from opentelemetry import trace
-from open_webui.env import (
+from OrionIX Quantum.env import (
     AUDIT_UVICORN_LOGGER_NAMES,
     AUDIT_LOG_FILE_ROTATION_SIZE,
     AUDIT_LOG_LEVEL,
@@ -68,7 +68,7 @@ class InterceptHandler(logging.Handler):
             **self._get_extras()
         ).log(level, record.getMessage())
         if ENABLE_OTEL and ENABLE_OTEL_LOGS:
-            from open_webui.utils.telemetry.logs import otel_handler
+            from OrionIX Quantum.utils.telemetry.logs import otel_handler
 
             otel_handler.emit(record)
 

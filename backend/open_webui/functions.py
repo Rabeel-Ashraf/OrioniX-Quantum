@@ -19,33 +19,33 @@ from fastapi import (
 from starlette.responses import Response, StreamingResponse
 
 
-from open_webui.socket.main import (
+from OrionIX Quantum.socket.main import (
     get_event_call,
     get_event_emitter,
 )
 
 
-from open_webui.models.users import UserModel
-from open_webui.models.functions import Functions
-from open_webui.models.models import Models
+from OrionIX Quantum.models.users import UserModel
+from OrionIX Quantum.models.functions import Functions
+from OrionIX Quantum.models.models import Models
 
-from open_webui.utils.plugin import (
+from OrionIX Quantum.utils.plugin import (
     load_function_module_by_id,
     get_function_module_from_cache,
 )
-from open_webui.utils.tools import get_tools
-from open_webui.utils.access_control import has_access
+from OrionIX Quantum.utils.tools import get_tools
+from OrionIX Quantum.utils.access_control import has_access
 
-from open_webui.env import SRC_LOG_LEVELS, GLOBAL_LOG_LEVEL
+from OrionIX Quantum.env import SRC_LOG_LEVELS, GLOBAL_LOG_LEVEL
 
-from open_webui.utils.misc import (
+from OrionIX Quantum.utils.misc import (
     add_or_update_system_message,
     get_last_user_message,
     prepend_to_first_user_message_content,
     openai_chat_chunk_message_template,
     openai_chat_completion_message_template,
 )
-from open_webui.utils.payload import (
+from OrionIX Quantum.utils.payload import (
     apply_model_params_to_body_openai,
     apply_system_prompt_to_body,
 )

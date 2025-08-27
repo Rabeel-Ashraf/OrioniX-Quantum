@@ -3,11 +3,11 @@ from pydantic import BaseModel, ConfigDict
 
 from typing import Optional
 
-from open_webui.utils.auth import get_admin_user, get_verified_user
-from open_webui.config import get_config, save_config
-from open_webui.config import BannerModel
+from OrionIX Quantum.utils.auth import get_admin_user, get_verified_user
+from OrionIX Quantum.config import get_config, save_config
+from OrionIX Quantum.config import BannerModel
 
-from open_webui.utils.tools import (
+from OrionIX Quantum.utils.tools import (
     get_tool_server_data,
     get_tool_server_url,
     set_tool_servers,

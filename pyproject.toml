@@ -1,8 +1,8 @@
 [project]
-name = "open-webui"
-description = "Open WebUI"
+name = "OrionIX Quantum"
+description = "OrionIX Quantum"
 authors = [
-    { name = "Timothy Jaeryang Baek", email = "tim@openwebui.com" }
+    { name = "Timothy Jaeryang Baek", email = "tim@OrionIX Quantum.com" }
 ]
 license = { file = "LICENSE" }
 dependencies = [
@@ -155,7 +155,7 @@ classifiers = [
 ]
 
 [project.scripts]
-open-webui = "open_webui:app"
+OrionIX Quantum = "OrionIX Quantum:app"
 
 [build-system]
 requires = ["hatchling"]
@@ -187,7 +187,7 @@ exclude = [
     "webui.db",
     "chroma.sqlite3",
 ]
-force-include = { "CHANGELOG.md" = "open_webui/CHANGELOG.md", build = "open_webui/frontend" }
+force-include = { "CHANGELOG.md" = "OrionIX Quantum/CHANGELOG.md", build = "OrionIX Quantum/frontend" }
 
 [tool.codespell]
 # Ref: https://github.com/codespell-project/codespell#using-a-config-file

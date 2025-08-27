@@ -51,17 +51,17 @@ from starlette.responses import Response, StreamingResponse
 from starlette.datastructures import Headers
 
 
-from open_webui.utils import logger
-from open_webui.utils.audit import AuditLevel, AuditLoggingMiddleware
-from open_webui.utils.logger import start_logger
-from open_webui.socket.main import (
+from OrionIX Quantum.utils import logger
+from OrionIX Quantum.utils.audit import AuditLevel, AuditLoggingMiddleware
+from OrionIX Quantum.utils.logger import start_logger
+from OrionIX Quantum.socket.main import (
     app as socket_app,
     periodic_usage_pool_cleanup,
     get_event_emitter,
     get_models_in_use,
     get_active_user_ids,
 )
-from open_webui.routers import (
+from OrionIX Quantum.routers import (
     audio,
     images,
     ollama,
@@ -89,21 +89,21 @@ from open_webui.routers import (
     scim,
 )
 
-from open_webui.routers.retrieval import (
+from OrionIX Quantum.routers.retrieval import (
     get_embedding_function,
     get_reranking_function,
     get_ef,
     get_rf,
 )
 
-from open_webui.internal.db import Session, engine
+from OrionIX Quantum.internal.db import Session, engine
 
-from open_webui.models.functions import Functions
-from open_webui.models.models import Models
-from open_webui.models.users import UserModel, Users
-from open_webui.models.chats import Chats
+from OrionIX Quantum.models.functions import Functions
+from OrionIX Quantum.models.models import Models
+from OrionIX Quantum.models.users import UserModel, Users
+from OrionIX Quantum.models.chats import Chats
 
-from open_webui.config import (
+from OrionIX Quantum.config import (
     # Ollama
     ENABLE_OLLAMA_API,
     OLLAMA_BASE_URLS,
@@ -400,7 +400,7 @@ from open_webui.config import (
     AppConfig,
     reset_config,
 )
-from open_webui.env import (
+from OrionIX Quantum.env import (
     LICENSE_KEY,
     AUDIT_EXCLUDED_PATHS,
     AUDIT_LOG_LEVEL,
@@ -438,33 +438,33 @@ from open_webui.env import (
 )
 
 
-from open_webui.utils.models import (
+from OrionIX Quantum.utils.models import (
     get_all_models,
     get_all_base_models,
     check_model_access,
 )
-from open_webui.utils.chat import (
+from OrionIX Quantum.utils.chat import (
     generate_chat_completion as chat_completion_handler,
     chat_completed as chat_completed_handler,
     chat_action as chat_action_handler,
 )
-from open_webui.utils.embeddings import generate_embeddings
-from open_webui.utils.middleware import process_chat_payload, process_chat_response
-from open_webui.utils.access_control import has_access
+from OrionIX Quantum.utils.embeddings import generate_embeddings
+from OrionIX Quantum.utils.middleware import process_chat_payload, process_chat_response
+from OrionIX Quantum.utils.access_control import has_access
 
-from open_webui.utils.auth import (
+from OrionIX Quantum.utils.auth import (
     get_license_data,
     get_http_authorization_cred,
     decode_token,
     get_admin_user,
     get_verified_user,
 )
-from open_webui.utils.plugin import install_tool_and_function_dependencies
-from open_webui.utils.oauth import OAuthManager
-from open_webui.utils.security_headers import SecurityHeadersMiddleware
-from open_webui.utils.redis import get_redis_connection
+from OrionIX Quantum.utils.plugin import install_tool_and_function_dependencies
+from OrionIX Quantum.utils.oauth import OAuthManager
+from OrionIX Quantum.utils.security_headers import SecurityHeadersMiddleware
+from OrionIX Quantum.utils.redis import get_redis_connection
 
-from open_webui.tasks import (
+from OrionIX Quantum.tasks import (
     redis_task_command_listener,
     list_task_ids_by_item_id,
     create_task,
@@ -472,10 +472,10 @@ from open_webui.tasks import (
     list_tasks,
 )  # Import from tasks.py
 
-from open_webui.utils.redis import get_sentinels_from_env
+from OrionIX Quantum.utils.redis import get_sentinels_from_env
 
 
-from open_webui.constants import ERROR_MESSAGES
+from OrionIX Quantum.constants import ERROR_MESSAGES
 
 
 if SAFE_MODE:
@@ -514,7 +514,7 @@ print(
 
 v{VERSION} - building the best AI user interface.
 {f"Commit: {WEBUI_BUILD_HASH}" if WEBUI_BUILD_HASH != "dev-build" else ""}
-https://github.com/open-webui/open-webui
+https://github.com/OrionIX Quantum/OrionIX Quantum
 """
 )
 
@@ -583,7 +583,7 @@ async def lifespan(app: FastAPI):
 
 
 app = FastAPI(
-    title="Open WebUI",
+    title="OrionIX Quantum",
     docs_url="/docs" if ENV == "dev" else None,
     openapi_url="/openapi.json" if ENV == "dev" else None,
     redoc_url=None,
@@ -612,7 +612,7 @@ app.state.LICENSE_METADATA = None
 ########################################
 
 if ENABLE_OTEL:
-    from open_webui.utils.telemetry.setup import setup as setup_opentelemetry
+    from OrionIX Quantum.utils.telemetry.setup import setup as setup_opentelemetry
 
     setup_opentelemetry(app=app, db_engine=engine)
 
@@ -1817,7 +1817,7 @@ async def get_app_latest_release_version(user=Depends(get_verified_user)):
         timeout = aiohttp.ClientTimeout(total=1)
         async with aiohttp.ClientSession(timeout=timeout, trust_env=True) as session:
             async with session.get(
-                "https://api.github.com/repos/open-webui/open-webui/releases/latest",
+                "https://api.github.com/repos/OrionIX Quantum/OrionIX Quantum/releases/latest",
                 ssl=AIOHTTP_CLIENT_SESSION_SSL,
             ) as response:
                 response.raise_for_status()
@@ -1838,7 +1838,7 @@ async def get_app_changelog():
 @app.get("/api/usage")
 async def get_current_usage(user=Depends(get_verified_user)):
     """
-    Get current usage statistics for Open WebUI.
+    Get current usage statistics for OrionIX Quantum.
     This is an experimental endpoint and subject to change.
     """
     try:

@@ -7,9 +7,9 @@ import types
 import tempfile
 import logging
 
-from open_webui.env import SRC_LOG_LEVELS, PIP_OPTIONS, PIP_PACKAGE_INDEX_OPTIONS
-from open_webui.models.functions import Functions
-from open_webui.models.tools import Tools
+from OrionIX Quantum.env import SRC_LOG_LEVELS, PIP_OPTIONS, PIP_PACKAGE_INDEX_OPTIONS
+from OrionIX Quantum.models.functions import Functions
+from OrionIX Quantum.models.tools import Tools
 
 log = logging.getLogger(__name__)
 log.setLevel(SRC_LOG_LEVELS["MAIN"])
@@ -56,10 +56,10 @@ def replace_imports(content):
     Replace the import paths in the content.
     """
     replacements = {
-        "from utils": "from open_webui.utils",
-        "from apps": "from open_webui.apps",
-        "from main": "from open_webui.main",
-        "from config": "from open_webui.config",
+        "from utils": "from OrionIX Quantum.utils",
+        "from apps": "from OrionIX Quantum.apps",
+        "from main": "from OrionIX Quantum.main",
+        "from config": "from OrionIX Quantum.config",
     }
 
     for old, new in replacements.items():

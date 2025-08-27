@@ -1,4 +1,4 @@
-"""OpenTelemetry metrics bootstrap for Open WebUI.
+"""OpenTelemetry metrics bootstrap for OrionIX Quantum.
 
 This module initialises a MeterProvider that sends metrics to an OTLP
 collector. The collector is responsible for exposing a Prometheus
@@ -37,7 +37,7 @@ from opentelemetry.sdk.metrics.export import (
 )
 from opentelemetry.sdk.resources import Resource
 
-from open_webui.env import (
+from OrionIX Quantum.env import (
     OTEL_SERVICE_NAME,
     OTEL_METRICS_EXPORTER_OTLP_ENDPOINT,
     OTEL_METRICS_BASIC_AUTH_USERNAME,
@@ -45,8 +45,8 @@ from open_webui.env import (
     OTEL_METRICS_OTLP_SPAN_EXPORTER,
     OTEL_METRICS_EXPORTER_OTLP_INSECURE,
 )
-from open_webui.socket.main import get_active_user_ids
-from open_webui.models.users import Users
+from OrionIX Quantum.socket.main import get_active_user_ids
+from OrionIX Quantum.models.users import Users
 
 _EXPORT_INTERVAL_MILLIS = 10_000  # 10 seconds
 

@@ -4,9 +4,9 @@ import logging
 from contextlib import contextmanager
 from typing import Any, Optional
 
-from open_webui.internal.wrappers import register_connection
-from open_webui.env import (
-    OPEN_WEBUI_DIR,
+from OrionIX Quantum.internal.wrappers import register_connection
+from OrionIX Quantum.env import (
+    OrionIX Quantum_DIR,
     DATABASE_URL,
     DATABASE_SCHEMA,
     SRC_LOG_LEVELS,
@@ -57,7 +57,7 @@ def handle_peewee_migration(DATABASE_URL):
     try:
         # Replace the postgresql:// with postgres:// to handle the peewee migration
         db = register_connection(DATABASE_URL.replace("postgresql://", "postgres://"))
-        migrate_dir = OPEN_WEBUI_DIR / "internal" / "migrations"
+        migrate_dir = OrionIX Quantum_DIR / "internal" / "migrations"
         router = Router(db, logger=log, migrate_dir=migrate_dir)
         router.run()
         db.close()

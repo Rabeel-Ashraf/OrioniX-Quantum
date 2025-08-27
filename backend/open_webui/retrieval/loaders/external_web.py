@@ -4,7 +4,7 @@ from typing import Iterator, List, Union
 
 from langchain_core.document_loaders import BaseLoader
 from langchain_core.documents import Document
-from open_webui.env import SRC_LOG_LEVELS
+from OrionIX Quantum.env import SRC_LOG_LEVELS
 
 log = logging.getLogger(__name__)
 log.setLevel(SRC_LOG_LEVELS["RAG"])
@@ -32,7 +32,7 @@ class ExternalWebLoader(BaseLoader):
                 response = requests.post(
                     self.external_url,
                     headers={
-                        "User-Agent": "Open WebUI (https://github.com/open-webui/open-webui) External Web Loader",
+                        "User-Agent": "OrionIX Quantum (https://github.com/OrionIX Quantum/OrionIX Quantum) External Web Loader",
                         "Authorization": f"Bearer {self.external_api_key}",
                     },
                     json={

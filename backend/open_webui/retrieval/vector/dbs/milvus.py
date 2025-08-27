@@ -6,14 +6,14 @@ import json
 import logging
 from typing import Optional
 
-from open_webui.retrieval.vector.utils import stringify_metadata
-from open_webui.retrieval.vector.main import (
+from OrionIX Quantum.retrieval.vector.utils import stringify_metadata
+from OrionIX Quantum.retrieval.vector.main import (
     VectorDBBase,
     VectorItem,
     SearchResult,
     GetResult,
 )
-from open_webui.config import (
+from OrionIX Quantum.config import (
     MILVUS_URI,
     MILVUS_DB,
     MILVUS_TOKEN,
@@ -23,7 +23,7 @@ from open_webui.config import (
     MILVUS_HNSW_EFCONSTRUCTION,
     MILVUS_IVF_FLAT_NLIST,
 )
-from open_webui.env import SRC_LOG_LEVELS
+from OrionIX Quantum.env import SRC_LOG_LEVELS
 
 log = logging.getLogger(__name__)
 log.setLevel(SRC_LOG_LEVELS["RAG"])
@@ -31,7 +31,7 @@ log.setLevel(SRC_LOG_LEVELS["RAG"])
 
 class MilvusClient(VectorDBBase):
     def __init__(self):
-        self.collection_prefix = "open_webui"
+        self.collection_prefix = "OrionIX Quantum"
         if MILVUS_TOKEN is None:
             self.client = Client(uri=MILVUS_URI, db_name=MILVUS_DB)
         else:

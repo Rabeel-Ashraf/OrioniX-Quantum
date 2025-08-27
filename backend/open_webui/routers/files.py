@@ -22,24 +22,24 @@ from fastapi import (
 )
 
 from fastapi.responses import FileResponse, StreamingResponse
-from open_webui.constants import ERROR_MESSAGES
-from open_webui.env import SRC_LOG_LEVELS
-from open_webui.retrieval.vector.factory import VECTOR_DB_CLIENT
+from OrionIX Quantum.constants import ERROR_MESSAGES
+from OrionIX Quantum.env import SRC_LOG_LEVELS
+from OrionIX Quantum.retrieval.vector.factory import VECTOR_DB_CLIENT
 
-from open_webui.models.users import Users
-from open_webui.models.files import (
+from OrionIX Quantum.models.users import Users
+from OrionIX Quantum.models.files import (
     FileForm,
     FileModel,
     FileModelResponse,
     Files,
 )
-from open_webui.models.knowledge import Knowledges
+from OrionIX Quantum.models.knowledge import Knowledges
 
-from open_webui.routers.knowledge import get_knowledge, get_knowledge_list
-from open_webui.routers.retrieval import ProcessFileForm, process_file
-from open_webui.routers.audio import transcribe
-from open_webui.storage.provider import Storage
-from open_webui.utils.auth import get_admin_user, get_verified_user
+from OrionIX Quantum.routers.knowledge import get_knowledge, get_knowledge_list
+from OrionIX Quantum.routers.retrieval import ProcessFileForm, process_file
+from OrionIX Quantum.routers.audio import transcribe
+from OrionIX Quantum.storage.provider import Storage
+from OrionIX Quantum.utils.auth import get_admin_user, get_verified_user
 from pydantic import BaseModel
 
 log = logging.getLogger(__name__)

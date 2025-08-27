@@ -18,10 +18,10 @@ from aiocache import cached
 import requests
 from urllib.parse import quote
 
-from open_webui.models.chats import Chats
-from open_webui.models.users import UserModel
+from OrionIX Quantum.models.chats import Chats
+from OrionIX Quantum.models.users import UserModel
 
-from open_webui.env import (
+from OrionIX Quantum.env import (
     ENABLE_FORWARD_USER_INFO_HEADERS,
 )
 
@@ -40,23 +40,23 @@ from pydantic import BaseModel, ConfigDict, validator
 from starlette.background import BackgroundTask
 
 
-from open_webui.models.models import Models
-from open_webui.utils.misc import (
+from OrionIX Quantum.models.models import Models
+from OrionIX Quantum.utils.misc import (
     calculate_sha256,
 )
-from open_webui.utils.payload import (
+from OrionIX Quantum.utils.payload import (
     apply_model_params_to_body_ollama,
     apply_model_params_to_body_openai,
     apply_system_prompt_to_body,
 )
-from open_webui.utils.auth import get_admin_user, get_verified_user
-from open_webui.utils.access_control import has_access
+from OrionIX Quantum.utils.auth import get_admin_user, get_verified_user
+from OrionIX Quantum.utils.access_control import has_access
 
 
-from open_webui.config import (
+from OrionIX Quantum.config import (
     UPLOAD_DIR,
 )
-from open_webui.env import (
+from OrionIX Quantum.env import (
     ENV,
     SRC_LOG_LEVELS,
     MODELS_CACHE_TTL,
@@ -65,7 +65,7 @@ from open_webui.env import (
     AIOHTTP_CLIENT_TIMEOUT_MODEL_LIST,
     BYPASS_MODEL_ACCESS_CONTROL,
 )
-from open_webui.constants import ERROR_MESSAGES
+from OrionIX Quantum.constants import ERROR_MESSAGES
 
 log = logging.getLogger(__name__)
 log.setLevel(SRC_LOG_LEVELS["OLLAMA"])
@@ -170,7 +170,7 @@ async def send_post_request(
                 log.error(f"Failed to parse error response: {e}")
                 raise HTTPException(
                     status_code=r.status,
-                    detail=f"Open WebUI: Server Connection Error",
+                    detail=f"OrionIX Quantum: Server Connection Error",
                 )
 
         r.raise_for_status()  # Raises an error for bad responses (4xx, 5xx)
@@ -199,7 +199,7 @@ async def send_post_request(
 
         raise HTTPException(
             status_code=r.status if r else 500,
-            detail=detail if e else "Open WebUI: Server Connection Error",
+            detail=detail if e else "OrionIX Quantum: Server Connection Error",
         )
     finally:
         if not stream:
@@ -276,7 +276,7 @@ async def verify_connection(
         except aiohttp.ClientError as e:
             log.exception(f"Client error: {str(e)}")
             raise HTTPException(
-                status_code=500, detail="Open WebUI: Server Connection Error"
+                status_code=500, detail="OrionIX Quantum: Server Connection Error"
             )
         except Exception as e:
             log.exception(f"Unexpected error: {e}")
@@ -499,7 +499,7 @@ async def get_ollama_tags(
 
             raise HTTPException(
                 status_code=r.status_code if r else 500,
-                detail=detail if detail else "Open WebUI: Server Connection Error",
+                detail=detail if detail else "OrionIX Quantum: Server Connection Error",
             )
 
     if user.role == "user" and not BYPASS_MODEL_ACCESS_CONTROL:
@@ -637,7 +637,7 @@ async def get_ollama_versions(request: Request, url_idx: Optional[int] = None):
 
                 raise HTTPException(
                     status_code=r.status_code if r else 500,
-                    detail=detail if detail else "Open WebUI: Server Connection Error",
+                    detail=detail if detail else "OrionIX Quantum: Server Connection Error",
                 )
     else:
         return {"version": False}
@@ -871,7 +871,7 @@ async def copy_model(
 
         raise HTTPException(
             status_code=r.status_code if r else 500,
-            detail=detail if detail else "Open WebUI: Server Connection Error",
+            detail=detail if detail else "OrionIX Quantum: Server Connection Error",
         )
 
 
@@ -941,7 +941,7 @@ async def delete_model(
 
         raise HTTPException(
             status_code=r.status_code if r else 500,
-            detail=detail if detail else "Open WebUI: Server Connection Error",
+            detail=detail if detail else "OrionIX Quantum: Server Connection Error",
         )
 
 
@@ -1005,7 +1005,7 @@ async def show_model_info(
 
         raise HTTPException(
             status_code=r.status_code if r else 500,
-            detail=detail if detail else "Open WebUI: Server Connection Error",
+            detail=detail if detail else "OrionIX Quantum: Server Connection Error",
         )
 
 
@@ -1093,7 +1093,7 @@ async def embed(
 
         raise HTTPException(
             status_code=r.status_code if r else 500,
-            detail=detail if detail else "Open WebUI: Server Connection Error",
+            detail=detail if detail else "OrionIX Quantum: Server Connection Error",
         )
 
 
@@ -1180,7 +1180,7 @@ async def embeddings(
 
         raise HTTPException(
             status_code=r.status_code if r else 500,
-            detail=detail if detail else "Open WebUI: Server Connection Error",
+            detail=detail if detail else "OrionIX Quantum: Server Connection Error",
         )
 
 
@@ -1603,7 +1603,7 @@ async def get_openai_models(
             ]
         except Exception as e:
             log.exception(e)
-            error_detail = "Open WebUI: Server Connection Error"
+            error_detail = "OrionIX Quantum: Server Connection Error"
             if r is not None:
                 try:
                     res = r.json()

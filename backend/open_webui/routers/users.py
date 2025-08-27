@@ -9,10 +9,10 @@ from fastapi.responses import Response, StreamingResponse, FileResponse
 from pydantic import BaseModel
 
 
-from open_webui.models.auths import Auths
-from open_webui.models.groups import Groups
-from open_webui.models.chats import Chats
-from open_webui.models.users import (
+from OrionIX Quantum.models.auths import Auths
+from OrionIX Quantum.models.groups import Groups
+from OrionIX Quantum.models.chats import Chats
+from OrionIX Quantum.models.users import (
     UserModel,
     UserListResponse,
     UserInfoListResponse,
@@ -23,17 +23,17 @@ from open_webui.models.users import (
 )
 
 
-from open_webui.socket.main import (
+from OrionIX Quantum.socket.main import (
     get_active_status_by_user_id,
     get_active_user_ids,
     get_user_active_status,
 )
-from open_webui.constants import ERROR_MESSAGES
-from open_webui.env import SRC_LOG_LEVELS, STATIC_DIR
+from OrionIX Quantum.constants import ERROR_MESSAGES
+from OrionIX Quantum.env import SRC_LOG_LEVELS, STATIC_DIR
 
 
-from open_webui.utils.auth import get_admin_user, get_password_hash, get_verified_user
-from open_webui.utils.access_control import get_permissions, has_permission
+from OrionIX Quantum.utils.auth import get_admin_user, get_password_hash, get_verified_user
+from OrionIX Quantum.utils.access_control import get_permissions, has_permission
 
 
 log = logging.getLogger(__name__)

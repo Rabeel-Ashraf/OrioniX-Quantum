@@ -8,22 +8,22 @@ from pydantic import BaseModel, HttpUrl
 from fastapi import APIRouter, Depends, HTTPException, Request, status
 
 
-from open_webui.models.tools import (
+from OrionIX Quantum.models.tools import (
     ToolForm,
     ToolModel,
     ToolResponse,
     ToolUserResponse,
     Tools,
 )
-from open_webui.utils.plugin import load_tool_module_by_id, replace_imports
-from open_webui.utils.tools import get_tool_specs
-from open_webui.utils.auth import get_admin_user, get_verified_user
-from open_webui.utils.access_control import has_access, has_permission
-from open_webui.utils.tools import get_tool_servers
+from OrionIX Quantum.utils.plugin import load_tool_module_by_id, replace_imports
+from OrionIX Quantum.utils.tools import get_tool_specs
+from OrionIX Quantum.utils.auth import get_admin_user, get_verified_user
+from OrionIX Quantum.utils.access_control import has_access, has_permission
+from OrionIX Quantum.utils.tools import get_tool_servers
 
-from open_webui.env import SRC_LOG_LEVELS
-from open_webui.config import CACHE_DIR, BYPASS_ADMIN_ACCESS_CONTROL
-from open_webui.constants import ERROR_MESSAGES
+from OrionIX Quantum.env import SRC_LOG_LEVELS
+from OrionIX Quantum.config import CACHE_DIR, BYPASS_ADMIN_ACCESS_CONTROL
+from OrionIX Quantum.constants import ERROR_MESSAGES
 
 
 log = logging.getLogger(__name__)

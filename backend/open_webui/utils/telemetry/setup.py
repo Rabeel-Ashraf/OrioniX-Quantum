@@ -11,9 +11,9 @@ from opentelemetry.sdk.trace.export import BatchSpanProcessor
 from sqlalchemy import Engine
 from base64 import b64encode
 
-from open_webui.utils.telemetry.instrumentors import Instrumentor
-from open_webui.utils.telemetry.metrics import setup_metrics
-from open_webui.env import (
+from OrionIX Quantum.utils.telemetry.instrumentors import Instrumentor
+from OrionIX Quantum.utils.telemetry.metrics import setup_metrics
+from OrionIX Quantum.env import (
     OTEL_SERVICE_NAME,
     OTEL_EXPORTER_OTLP_ENDPOINT,
     OTEL_EXPORTER_OTLP_INSECURE,

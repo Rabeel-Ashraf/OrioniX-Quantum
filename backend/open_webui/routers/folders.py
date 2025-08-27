@@ -8,24 +8,24 @@ from pydantic import BaseModel
 import mimetypes
 
 
-from open_webui.models.folders import (
+from OrionIX Quantum.models.folders import (
     FolderForm,
     FolderModel,
     Folders,
 )
-from open_webui.models.chats import Chats
+from OrionIX Quantum.models.chats import Chats
 
-from open_webui.config import UPLOAD_DIR
-from open_webui.env import SRC_LOG_LEVELS
-from open_webui.constants import ERROR_MESSAGES
+from OrionIX Quantum.config import UPLOAD_DIR
+from OrionIX Quantum.env import SRC_LOG_LEVELS
+from OrionIX Quantum.constants import ERROR_MESSAGES
 
 
 from fastapi import APIRouter, Depends, File, HTTPException, UploadFile, status, Request
 from fastapi.responses import FileResponse, StreamingResponse
 
 
-from open_webui.utils.auth import get_admin_user, get_verified_user
-from open_webui.utils.access_control import has_permission
+from OrionIX Quantum.utils.auth import get_admin_user, get_verified_user
+from OrionIX Quantum.utils.access_control import has_permission
 
 
 log = logging.getLogger(__name__)

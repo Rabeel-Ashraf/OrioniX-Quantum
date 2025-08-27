@@ -3,9 +3,9 @@ import time
 import uuid
 from typing import Optional
 
-from open_webui.internal.db import Base, get_db
-from open_webui.utils.access_control import has_access
-from open_webui.models.users import Users, UserResponse
+from OrionIX Quantum.internal.db import Base, get_db
+from OrionIX Quantum.utils.access_control import has_access
+from OrionIX Quantum.models.users import Users, UserResponse
 
 
 from pydantic import BaseModel, ConfigDict

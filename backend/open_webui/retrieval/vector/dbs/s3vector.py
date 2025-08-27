@@ -1,12 +1,12 @@
-from open_webui.retrieval.vector.utils import stringify_metadata
-from open_webui.retrieval.vector.main import (
+from OrionIX Quantum.retrieval.vector.utils import stringify_metadata
+from OrionIX Quantum.retrieval.vector.main import (
     VectorDBBase,
     VectorItem,
     GetResult,
     SearchResult,
 )
-from open_webui.config import S3_VECTOR_BUCKET_NAME, S3_VECTOR_REGION
-from open_webui.env import SRC_LOG_LEVELS
+from OrionIX Quantum.config import S3_VECTOR_BUCKET_NAME, S3_VECTOR_REGION
+from OrionIX Quantum.env import SRC_LOG_LEVELS
 from typing import List, Optional, Dict, Any, Union
 import logging
 import boto3
@@ -17,7 +17,7 @@ log.setLevel(SRC_LOG_LEVELS["RAG"])
 
 class S3VectorClient(VectorDBBase):
     """
-    AWS S3 Vector integration for Open WebUI Knowledge.
+    AWS S3 Vector integration for OrionIX Quantum Knowledge.
     """
 
     def __init__(self):
@@ -80,7 +80,7 @@ class S3VectorClient(VectorDBBase):
         if not isinstance(metadata, dict) or len(metadata) <= 10:
             return metadata
 
-        # Keep only the first 10 keys, prioritizing important ones based on actual Open WebUI metadata
+        # Keep only the first 10 keys, prioritizing important ones based on actual OrionIX Quantum metadata
         important_keys = [
             "text",  # The actual document content
             "file_id",  # File ID
@@ -570,7 +570,7 @@ class S3VectorClient(VectorDBBase):
             )
 
             # Return in GetResult format
-            # The Open WebUI GetResult expects lists of lists, so we wrap each list
+            # The OrionIX Quantum GetResult expects lists of lists, so we wrap each list
             if all_ids:
                 return GetResult(
                     ids=[all_ids], documents=[all_documents], metadatas=[all_metadatas]

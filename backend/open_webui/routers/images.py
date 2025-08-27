@@ -18,12 +18,12 @@ from fastapi import (
     UploadFile,
 )
 
-from open_webui.config import CACHE_DIR
-from open_webui.constants import ERROR_MESSAGES
-from open_webui.env import ENABLE_FORWARD_USER_INFO_HEADERS, SRC_LOG_LEVELS
-from open_webui.routers.files import upload_file_handler
-from open_webui.utils.auth import get_admin_user, get_verified_user
-from open_webui.utils.images.comfyui import (
+from OrionIX Quantum.config import CACHE_DIR
+from OrionIX Quantum.constants import ERROR_MESSAGES
+from OrionIX Quantum.env import ENABLE_FORWARD_USER_INFO_HEADERS, SRC_LOG_LEVELS
+from OrionIX Quantum.routers.files import upload_file_handler
+from OrionIX Quantum.utils.auth import get_admin_user, get_verified_user
+from OrionIX Quantum.utils.images.comfyui import (
     ComfyUIGenerateImageForm,
     ComfyUIWorkflow,
     comfyui_generate_image,

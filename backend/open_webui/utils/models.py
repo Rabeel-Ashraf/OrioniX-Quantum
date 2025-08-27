@@ -6,27 +6,27 @@ import sys
 from aiocache import cached
 from fastapi import Request
 
-from open_webui.routers import openai, ollama
-from open_webui.functions import get_function_models
+from OrionIX Quantum.routers import openai, ollama
+from OrionIX Quantum.functions import get_function_models
 
 
-from open_webui.models.functions import Functions
-from open_webui.models.models import Models
+from OrionIX Quantum.models.functions import Functions
+from OrionIX Quantum.models.models import Models
 
 
-from open_webui.utils.plugin import (
+from OrionIX Quantum.utils.plugin import (
     load_function_module_by_id,
     get_function_module_from_cache,
 )
-from open_webui.utils.access_control import has_access
+from OrionIX Quantum.utils.access_control import has_access
 
 
-from open_webui.config import (
+from OrionIX Quantum.config import (
     DEFAULT_ARENA_MODEL,
 )
 
-from open_webui.env import SRC_LOG_LEVELS, GLOBAL_LOG_LEVEL
-from open_webui.models.users import UserModel
+from OrionIX Quantum.env import SRC_LOG_LEVELS, GLOBAL_LOG_LEVEL
+from OrionIX Quantum.models.users import UserModel
 
 
 logging.basicConfig(stream=sys.stdout, level=GLOBAL_LOG_LEVEL)

@@ -420,7 +420,7 @@
 				'about us',
 				'aboutapp',
 				'aboutme',
-				'aboutopenwebui',
+				'aboutorionxquantumui',
 				'aboutpage',
 				'aboutus',
 				'check for updates',

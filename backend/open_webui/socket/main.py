@@ -9,16 +9,16 @@ from typing import Dict, Set
 from redis import asyncio as aioredis
 import pycrdt as Y
 
-from open_webui.models.users import Users, UserNameResponse
-from open_webui.models.channels import Channels
-from open_webui.models.chats import Chats
-from open_webui.models.notes import Notes, NoteUpdateForm
-from open_webui.utils.redis import (
+from OrionIX Quantum.models.users import Users, UserNameResponse
+from OrionIX Quantum.models.channels import Channels
+from OrionIX Quantum.models.chats import Chats
+from OrionIX Quantum.models.notes import Notes, NoteUpdateForm
+from OrionIX Quantum.utils.redis import (
     get_sentinels_from_env,
     get_sentinel_url_from_env,
 )
 
-from open_webui.env import (
+from OrionIX Quantum.env import (
     ENABLE_WEBSOCKET_SUPPORT,
     WEBSOCKET_MANAGER,
     WEBSOCKET_REDIS_URL,
@@ -28,14 +28,14 @@ from open_webui.env import (
     WEBSOCKET_SENTINEL_HOSTS,
     REDIS_KEY_PREFIX,
 )
-from open_webui.utils.auth import decode_token
-from open_webui.socket.utils import RedisDict, RedisLock, YdocManager
-from open_webui.tasks import create_task, stop_item_tasks
-from open_webui.utils.redis import get_redis_connection
-from open_webui.utils.access_control import has_access, get_users_with_access
+from OrionIX Quantum.utils.auth import decode_token
+from OrionIX Quantum.socket.utils import RedisDict, RedisLock, YdocManager
+from OrionIX Quantum.tasks import create_task, stop_item_tasks
+from OrionIX Quantum.utils.redis import get_redis_connection
+from OrionIX Quantum.utils.access_control import has_access, get_users_with_access
 
 
-from open_webui.env import (
+from OrionIX Quantum.env import (
     GLOBAL_LOG_LEVEL,
     SRC_LOG_LEVELS,
 )

@@ -1,7 +1,7 @@
 import json
 import uuid
-from open_webui.utils.redis import get_redis_connection
-from open_webui.env import REDIS_KEY_PREFIX
+from OrionIX Quantum.utils.redis import get_redis_connection
+from OrionIX Quantum.env import REDIS_KEY_PREFIX
 from typing import Optional, List, Tuple
 import pycrdt as Y
 

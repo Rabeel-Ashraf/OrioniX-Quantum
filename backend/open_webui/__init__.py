@@ -15,9 +15,9 @@ KEY_FILE = Path.cwd() / ".webui_secret_key"
 
 def version_callback(value: bool):
     if value:
-        from open_webui.env import VERSION
+        from OrionIX Quantum.env import VERSION
 
-        typer.echo(f"Open WebUI version: {VERSION}")
+        typer.echo(f"OrionIX Quantum version: {VERSION}")
         raise typer.Exit()
 
 
@@ -72,11 +72,11 @@ def serve(
             os.environ["USE_CUDA_DOCKER"] = "false"
             os.environ["LD_LIBRARY_PATH"] = ":".join(LD_LIBRARY_PATH)
 
-    import open_webui.main  # we need set environment variables before importing main
-    from open_webui.env import UVICORN_WORKERS  # Import the workers setting
+    import OrionIX Quantum.main  # we need set environment variables before importing main
+    from OrionIX Quantum.env import UVICORN_WORKERS  # Import the workers setting
 
     uvicorn.run(
-        "open_webui.main:app",
+        "OrionIX Quantum.main:app",
         host=host,
         port=port,
         forwarded_allow_ips="*",
@@ -91,7 +91,7 @@ def dev(
     reload: bool = True,
 ):
     uvicorn.run(
-        "open_webui.main:app",
+        "OrionIX Quantum.main:app",
         host=host,
         port=port,
         reload=reload,

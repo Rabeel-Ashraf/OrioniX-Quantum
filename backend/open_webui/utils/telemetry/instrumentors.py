@@ -26,9 +26,9 @@ from requests import PreparedRequest, Response
 from sqlalchemy import Engine
 from fastapi import status
 
-from open_webui.utils.telemetry.constants import SPAN_REDIS_TYPE, SpanAttributes
+from OrionIX Quantum.utils.telemetry.constants import SPAN_REDIS_TYPE, SpanAttributes
 
-from open_webui.env import SRC_LOG_LEVELS
+from OrionIX Quantum.env import SRC_LOG_LEVELS
 
 logger = logging.getLogger(__name__)
 logger.setLevel(SRC_LOG_LEVELS["MAIN"])

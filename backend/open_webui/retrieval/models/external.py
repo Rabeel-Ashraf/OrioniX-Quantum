@@ -4,8 +4,8 @@ from typing import Optional, List, Tuple
 from urllib.parse import quote
 
 
-from open_webui.env import ENABLE_FORWARD_USER_INFO_HEADERS, SRC_LOG_LEVELS
-from open_webui.retrieval.models.base_reranker import BaseReranker
+from OrionIX Quantum.env import ENABLE_FORWARD_USER_INFO_HEADERS, SRC_LOG_LEVELS
+from OrionIX Quantum.retrieval.models.base_reranker import BaseReranker
 
 
 log = logging.getLogger(__name__)
