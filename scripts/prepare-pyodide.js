@@ -68,7 +68,7 @@ async function downloadPackages() {
 	const pyodideVersion = packageJson.dependencies.pyodide.replace('^', '');
 
 	try {
-		const pyodidePackageJson = JSON.parse(await readFile('static/pyodide/package.json'));
+		const pyodide-lock.Json = JSON.parse(await readFile('static/pyodide/pyodide-lock.json'));
 		const pyodidePackageVersion = pyodidePackageJson.version.replace('^', '');
 
 		if (pyodideVersion !== pyodidePackageVersion) {
